@@ -10,15 +10,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/tours" element={<ToursPage />} />
-          <Route path="/tours/:id" element={<FullTourPage />} />
+          <Route path='/' element={<MainPage />} />
+          <Route path='tours' element={<ToursPage />} />
+          <Route path='tours/:id' element={<FullTourPage />} />
         </Route>
         <Route path='/admin' element={<AdminLayout />}>
-          <Route path="buses" element={<AdminBusPage />} />
-          <Route path="hotels" element={<AdminHotelsPage />} />
-          <Route path="orders" element={<AdminOrdersPage />} />
-          <Route path="tours" element={<AdminToursPage />} />
+          <Route path='buses' element={<AdminBusPage />} />
+          <Route path='hotels' element={<AdminHotelsPage />} />
+          <Route path='orders' element={<AdminOrdersPage />} />
+          <Route path='tours' element={<AdminToursPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
