@@ -30,11 +30,14 @@ export const TopToursFrame: React.FC<TopToursFrameProps> = ({ }) => {
 
     return(
         <div>
-            {tours.map((value, index) => (
+            {tours.map((value) => (
                 <div className={classes.shortTour}>
                     <div className={classes.imageTour}>
                     </div>
                     <div className={classes.tourInfo}>
+                        {value.name}
+                        {value.price}
+                        {value.startDate}
                     </div>
                 </div>
             ))}

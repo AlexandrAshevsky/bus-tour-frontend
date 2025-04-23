@@ -1,5 +1,5 @@
 import React from "react";
-import { TopToursFrame } from "../../components";
+import { TopToursFrame } from "../../../components";
 
 interface MainPageProps {
 
