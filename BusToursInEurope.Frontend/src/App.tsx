@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { MainPage } from './pages/common';
+import { AboutUsPage, MainPage } from './pages/common';
 import { FullTourPage, ToursPage } from './pages/tours';
 import { DefaultLayout } from './components/layout/DefaultLayout/DefaultLayout';
 import { AdminLayout } from './components/layout/AdminLayout/AdminLayout';
@@ -11,6 +11,8 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<MainPage />} />
+          <Route path='main' element={<MainPage />} />
+          <Route path='about' element={<AboutUsPage />}/>
           <Route path='tours' element={<ToursPage />} />
           <Route path='tours/:id' element={<FullTourPage />} />
         </Route>

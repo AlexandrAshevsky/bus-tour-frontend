@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
+import { DefaultHeader } from "./header/DefaultHeader";
+import { DefaultFooter } from "./footer/DefaultFooter";
 
-interface DefaultLayoutProps {
 
-}
-
-export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ }) => {
-
-    useEffect(() => {
-
-    }, [])
-
+export const DefaultLayout: React.FC = () => {
     return(
         <div>
-            <header>
-                Дефолтная шапка
-            </header>
+            <DefaultHeader />
             <Outlet />
-            <footer>
-                Дефолтный футер
-            </footer>
+            <DefaultFooter />
         </div>
     )
 }
