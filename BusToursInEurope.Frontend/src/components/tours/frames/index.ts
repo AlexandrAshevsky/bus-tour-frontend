@@ -1,3 +1,4 @@
-import { TopToursFrame } from "./TopToursFrame"
+import { TopToursFrame } from "./TopToursFrame/TopToursFrame"
+import { ShortTourFrame } from "./ShortTourFrame/ShortTourFrame"
 
 export { TopToursFrame }

@@ -1,15 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-interface UserProfilePageProps {
-
-}
-
-export const UserProfilePage: React.FC<UserProfilePageProps> = ({ }) => {
-
-    useEffect(() => {
-
-    }, [])
-
+export const UserProfilePage: React.FC = () => {
     return(
         <div>
         </div>
