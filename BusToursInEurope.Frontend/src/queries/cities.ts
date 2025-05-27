@@ -1,18 +1,19 @@
 import axios from 'axios';
 import { CityDto } from '../types/Cities';
+import { BASE_URL } from '../utils/constants/urlConstants';
 
-const BASE_URL = 'http://your-api-url/cities';
+const BASE_URL_CITY = `${BASE_URL}/cities`;
 
 export const createCity = async (data: CityDto) => {
-  return axios.post(BASE_URL, data);
+  return axios.post(BASE_URL_CITY, data);
 };
 
 export const updateCity = async (id: number, data: CityDto) => {
-  return axios.put(`${BASE_URL}/id?id=${id}`, data);
+  return axios.put(`${BASE_URL_CITY}/id?id=${id}`, data);
 };
 
 export const deleteCity = async (id: number) => {
-  return axios.delete(`${BASE_URL}/id?id=${id}`);
+  return axios.delete(`${BASE_URL_CITY}/id?id=${id}`);
 };
 
 export const getCities = async (filters: {
@@ -22,5 +23,5 @@ export const getCities = async (filters: {
   SortBy?: string;
   IsDescending?: boolean;
 }) => {
-  return axios.get(`${BASE_URL}/filters`, { params: filters });
+  return axios.get(`${BASE_URL_CITY}/filters`, { params: filters });
 };

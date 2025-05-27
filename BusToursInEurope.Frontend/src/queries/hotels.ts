@@ -1,18 +1,19 @@
 import axios from 'axios';
 import { HotelDto } from '../types/Hotels';
+import { BASE_URL } from '../utils/constants/urlConstants';
 
-const BASE_URL = 'http://your-api-url/hotels';
+const BASE_URL_HOTELS = `${BASE_URL}/hotels`;
 
 export const createHotel = async (data: HotelDto) => {
-  return axios.post(BASE_URL, data);
+  return axios.post(BASE_URL_HOTELS, data);
 };
 
 export const updateHotel = async (id: number, data: HotelDto) => {
-  return axios.put(`${BASE_URL}/id?id=${id}`, data);
+  return axios.put(`${BASE_URL_HOTELS}/id?id=${id}`, data);
 };
 
 export const deleteHotel = async (id: number) => {
-  return axios.delete(`${BASE_URL}/id?id=${id}`);
+  return axios.delete(`${BASE_URL_HOTELS}/id?id=${id}`);
 };
 
 export const getHotels = async (filters: {
@@ -21,5 +22,5 @@ export const getHotels = async (filters: {
   MaxRating?: number;
   CityId?: number;
 }) => {
-  return axios.get(`${BASE_URL}/filters`, { params: filters });
+  return axios.get(`${BASE_URL_HOTELS}/filters`, { params: filters });
 };

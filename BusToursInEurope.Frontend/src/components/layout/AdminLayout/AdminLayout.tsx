@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
+import { AdminSidebar } from "./Sidebar/AdminSidebar";
+import styles from "./styles.module.css";
 
-interface AdminLayoutProps {
-
-}
-
-export const AdminLayout: React.FC<AdminLayoutProps> = ({ }) => {
-
-    useEffect(() => {
-
-    }, [])
-
-    return(
+export const AdminLayout: React.FC = () => {
+    return (
         <div>
-            <div>
-                сайдбар
+            <AdminSidebar />
+            <div className={styles.mainContent}>
+                <Outlet />
             </div>
-            <Outlet/>
         </div>
-    )
-}
+    );
+};

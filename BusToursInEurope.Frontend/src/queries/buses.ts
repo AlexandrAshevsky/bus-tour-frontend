@@ -1,18 +1,17 @@
 import axios from 'axios';
 import { BusDto } from '../types/Buses';
-
-const BASE_URL = 'http://your-api-url/buses';
+import { BASE_URL } from '../utils/constants/urlConstants';
 
 export const createBus = async (data: BusDto) => {
-  return axios.post(BASE_URL, data);
+  return axios.post(`${BASE_URL}/buses`, data);
 };
 
 export const updateBus = async (id: number, data: BusDto) => {
-  return axios.put(`${BASE_URL}/id?id=${id}`, data);
+  return axios.put(`${BASE_URL}/buses/id?id=${id}`, data);
 };
 
 export const deleteBus = async (id: number) => {
-  return axios.delete(`${BASE_URL}/id?id=${id}`);
+  return axios.delete(`${BASE_URL}/buses/id?id=${id}`);
 };
 
 export const getBuses = async (filters: {
@@ -22,5 +21,5 @@ export const getBuses = async (filters: {
   SortBy?: string;
   IsDescending?: boolean;
 }) => {
-  return axios.get(`${BASE_URL}/filters`, { params: filters });
+  return axios.get(`${BASE_URL}/buses/filters`, { params: filters });
 };
